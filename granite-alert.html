@@ -8,8 +8,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
-<link rel="import" href="../polymer/polymer.html">
-
+<link rel="import" href="/components/polymer/polymer.html">
 <!--
 `<granite-alert>` is a set of [Bootstrap-like alert](http://getbootstrap.com/components/#alerts) elements.
 
@@ -27,7 +26,7 @@ Allowed values for `level`: `info`, `warning`, `danger` and `success`
 @homepage index.html
 @demo demo/index.html
 -->
-<dom-module is="granite-alert">
+<dom-module id="granite-alert">
 
     <template>
       <style>
@@ -65,7 +64,7 @@ Allowed values for `level`: `info`, `warning`, `danger` and `success`
        }
       </style>
       <div class$="alert {{level}} {{_hidden}}">
-        <content></content>
+        <slot></slot>
       </div>
     </template>
 
